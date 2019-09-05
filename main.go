@@ -22,7 +22,7 @@ func main() {
 	_ = glg.Log("Connecting Database ...")
 	err := functions.MysqlConnect(os.Getenv("DB_HOST"), os.Getenv("DB_PORT"), os.Getenv("DB_USERNAME"), os.Getenv("DB_PASSWORD"), os.Getenv("DB_DATABASE"))
 	if err != nil {
-		_ = glg.Error("Connection databases error : ", err.Error())
+		_ = glg.Error("Connection database error : ", err.Error())
 		os.Exit(1)
 	}
 	_ = glg.Log("Starting Services ...")
